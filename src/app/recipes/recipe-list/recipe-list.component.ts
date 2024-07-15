@@ -5,8 +5,7 @@ import { RecipeService } from '../recipe.service';
 @Component({
   selector: 'app-recipe-list',
   templateUrl: './recipe-list.component.html',
-  styleUrl: './recipe-list.component.css',
-  providers: [RecipeService]
+  styleUrl: './recipe-list.component.css'
 })
 export class RecipeListComponent implements OnInit {
   recipes: Recipe[];
@@ -15,8 +14,5 @@ export class RecipeListComponent implements OnInit {
   }
   constructor(private recipeService: RecipeService) {}
 
-  // @Output() recipeSelected = new EventEmitter<Recipe>();
-  onRecipeSelected(recipe: Recipe){
-  }
 
 }
