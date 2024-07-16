@@ -6,12 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  turn: string = 'r';
-  onChoose(link: string){
-    if(link === 'r'){
-      this.turn = 'r'
-    }else{
-      this.turn = 's'
-    }
-  }
+  
 }
