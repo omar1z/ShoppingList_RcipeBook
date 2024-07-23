@@ -18,23 +18,17 @@ import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinne
 import { AuthInterceptorService } from './auth/auth-interceptor.service';
 import { AlertComponent } from './shared/alert/alert.component';
 import { PlaceholderDirective } from './shared/placeholder/placeholder.directive';
-import { RecipesModule } from './recipes/recipes.model';
+import { RecipesModule } from './recipes/recipes.module';
+import { ShoppingListModule } from './shopping-list/shopping-list.module';
+import { SharedModule } from './shared/shared.module';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    
-    ShoppingListComponent,
-    ShoppingEditComponent,
-    DropdownDirective,
-    
+    HeaderComponent, 
     AuthComponent,
-    LoadingSpinnerComponent,
-    AlertComponent,
-    PlaceholderDirective
   ],
   imports: [
     BrowserModule,
@@ -42,7 +36,9 @@ import { RecipesModule } from './recipes/recipes.model';
     ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule,
-    RecipesModule
+    RecipesModule,
+    ShoppingListModule,
+    SharedModule
   ],
   providers: [ShoppingListService,RecipeService, DataStorageService, {provide: HTTP_INTERCEPTORS,
     useClass: AuthInterceptorService, multi: true
